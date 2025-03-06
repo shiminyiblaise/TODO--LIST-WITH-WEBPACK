@@ -7,7 +7,7 @@
   .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, rgb(245, 245, 245), rgb(245, 245, 245));
+    background: linear-gradient(135deg, whitesmoke, whitesmoke);
     padding: 20px;
   }
   
@@ -62,16 +62,6 @@
     font-size: 20px;
   }
   
-  #task-list li {
-    position: relative;
-    padding: 10px 10px 10px 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: white;
-    border-radius: 5px;
-    margin: 5px 0;
-    font-size: 20px;
-  }
-  
   .button-container {
     position: absolute;
     right: 0;
@@ -107,6 +97,13 @@
   
   #task-list li {
     text-decoration: none;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 20px;
   }
   
   #task-list li input[type="checkbox"]:checked + span.task-text {

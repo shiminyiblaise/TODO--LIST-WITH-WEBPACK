@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
-    clean: true
+    clean: true,
   },
   module: {
     rules: [
@@ -16,29 +16,29 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
-      }
-    ]
+        type: 'asset/resource',
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: 'index.html'
-    })
+      filename: 'index.html',
+    }),
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'public')
+      directory: path.join(__dirname, 'public'),
     },
     compress: true,
     port: 8080, // Changed port to 8080
@@ -48,10 +48,10 @@ module.exports = {
     historyApiFallback: true,
     client: {
       overlay: true,
-      progress: true
+      progress: true,
     },
     headers: {
-      'Access-Control-Allow-Origin': '*'
-    }
-  }
-}
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
+};
