@@ -1,140 +1,140 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .container {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, whitesmoke, whitesmoke);
-    padding: 20px;
-  }
-  
-  .container_content {
-    width: 100%;
-    max-width: 500px;
-    background-color: whitesmoke;
-    margin: 20px auto 20px;
-    padding: 40px 30px 50px;
-    border-radius: 10px;
-    box-shadow: 1px 5px 5px 5px;
-  }
-  
-  #task-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, whitesmoke, whitesmoke);
+  padding: 20px;
+}
+
+.container_content {
+  width: 100%;
+  max-width: 500px;
+  background-color: whitesmoke;
+  margin: 20px auto 20px;
+  padding: 40px 30px 50px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 5px 5px;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 330px;
+  margin: 20px;
+}
+
+.add {
+  padding: 10px;
+  color: black;
+  box-shadow: 3px 2px 3px 2px;
+  text-decoration: none;
+  height: 35px;
+  cursor: all-scroll;
+  margin-left: 10px;
+}
+
+.task-checkbox {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.Clear {
+  margin-top: 20px;
+  text-align: center;
+  align-items: center;
+  font-weight: 900;
+  color: black;
+  font-size: 20px;
+}
+
+.button-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button:hover {
+  background-color: aqua;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 5px;
+  margin-right: 10px;
+  box-shadow: 3px 2px 3px 2px;
+  height: 28px;
+  cursor: all-scroll;
+}
+
+.edit-btn {
+  margin-right: 10px;
+}
+
+#task-list li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#task-list li span.task-text {
+  padding-right: 40px;
+}
+
+#task-list li {
+  text-decoration: none;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+#task-list li input[type="checkbox"]:checked + span.task-text {
+  text-decoration: line-through;
+  padding-right: 40px;
+}
+
+@media (max-width: 769px) {
   #task-input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    width: 330px;
-    margin: 20px;
+    width: 160px;
   }
-  
+
   .add {
-    padding: 10px;
-    color: black;
-    box-shadow: 3px 2px 3px 2px;
-    text-decoration: none;
-    height: 35px;
-    cursor: all-scroll;
-    margin-left: 10px;
+    padding: 5px;
+    margin-left: 30px;
+    border-radius: 5px;
   }
-  
-  .task-checkbox {
-    text-decoration: line-through;
-    color: gray;
-  }
-  
-  .Clear {
-    margin-top: 20px;
-    text-align: center;
-    align-items: center;
-    font-weight: 900;
-    color: black;
-    font-size: 20px;
-  }
-  
-  .button-container {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  button:hover {
-    background-color: aqua;
-  }
-  
+
   .edit-btn,
   .delete-btn {
-    border: none;
-    padding: 5px;
-    margin-right: 10px;
     box-shadow: 3px 2px 3px 2px;
-    height: 28px;
-    cursor: all-scroll;
   }
-  
-  .edit-btn {
-    margin-right: 10px;
+}
+
+@media (min-width: 1025px) {
+  #task-input {
+    width: 330px;
   }
-  
-  #task-list li input[type="checkbox"] {
-    margin-right: 10px;
+
+  .add {
+    padding: 10px;
+    margin-left: 10px;
   }
-  
-  #task-list li span.task-text {
-    padding-right: 40px;
-  }
-  
-  #task-list li {
-    text-decoration: none;
-    position: relative;
-    padding: 10px 10px 10px 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: white;
-    border-radius: 5px;
-    margin: 5px 0;
-    font-size: 20px;
-  }
-  
-  #task-list li input[type="checkbox"]:checked + span.task-text {
-    text-decoration: line-through;
-    padding-right: 40px;
-  }
-  
-  @media (max-width: 769px) {
-    #task-input {
-      width: 160px;
-    }
-  
-    .add {
-      padding: 5px;
-      margin-left: 30px;
-      border-radius: 5px;
-    }
-  
-    .edit-btn,
-    .delete-btn {
-      box-shadow: 3px 2px 3px 2px;
-    }
-  }
-  
-  @media (min-width: 1025px) {
-    #task-input {
-      width: 330px;
-    }
-  
-    .add {
-      padding: 10px;
-      margin-left: 10px;
-    }
-  }
+}
